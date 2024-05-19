@@ -1,0 +1,140 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background-color: #282828;
+    border-bottom: 3px solid #f04e23;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #f04e23;
+    animation: glow 1.5s infinite alternate;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #dddddd;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f04e23;
+}
+
+#flame-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.flame {
+    position: relative;
+    width: 40px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,87,34,1) 0%, rgba(255,152,0,1) 50%, rgba(255,193,7,1) 100%);
+    border-radius: 50% 50% 0 0;
+    animation: flicker 1.5s infinite alternate;
+}
+
+.flame-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,87,34,0.8) 0%, rgba(255,152,0,0.6) 50%, rgba(255,193,7,0.4) 100%);
+    border-radius: 50% 50% 0 0;
+    animation: flicker 2s infinite alternate;
+    opacity: 0.8;
+}
+
+.flame-inner:nth-child(2) {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0.2s;
+}
+
+.flame-inner:nth-child(3) {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation-delay: 0.4s;
+}
+
+.flame-inner:nth-child(4) {
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    animation-delay: 0.6s;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #f04e23, 0 0 10px #f04e23, 0 0 20px #f04e23, 0 0 30px #f04e23, 0 0 40px #f04e23, 0 0 50px #f04e23, 0 0 60px #f04e23;
+    }
+    to {
+        text-shadow: 0 0 10px #f04e23, 0 0 20px #f04e23, 0 0 30px #f04e23, 0 0 40px #f04e23, 0 0 50px #f04e23, 0 0 60px #f04e23, 0 0 70px #f04e23;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#introduction, #motivation, #engagement {
+    padding: 20px;
+    background-color: #222222;
+}
+
+#introduction h2, #motivation h2, #engagement h2 {
+    font-size: 2em;
+    color: #f04e23;
+    margin-bottom: 10px;
+}
+
+#introduction p, #motivation p, #engagement p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 10px 0;
+}
